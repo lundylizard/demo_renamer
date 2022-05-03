@@ -1,7 +1,8 @@
 import os
 
 print('Made by lundylizard\n')
-for file in os.listdir('./'):
+
+for file in sorted(os.listdir("./"), reverse=True):
 
     if file != 'rename_demos.py':
         new_filename = './' + file.replace(file.split('_')[0], str(int(file.split('_')[0]) + 1)).replace('.dem', '') + '.dem '
